@@ -16,7 +16,12 @@ test("creator contact is accessible, contextual, and responsive", async ({ page 
     await expect(credit.getByText(creator.title, { exact: true })).toBeVisible();
     await expect(credit.getByText(creator.location, { exact: true })).toBeVisible();
     await expect(credit.getByText(creator.availability, { exact: true })).toBeVisible();
-    await expect(credit.getByRole("link", { name: /View Portfolio/ })).toHaveCount(0);
+    const portfolio = credit.getByRole("link", { name: /View Portfolio/ });
+    await expect(portfolio).toHaveAttribute("href", creator.portfolioUrl!);
+    await expect(portfolio).toHaveAttribute("target", "_blank");
+    await expect(portfolio).toHaveAttribute("rel", "noopener noreferrer");
+    await expect(portfolio).toHaveAttribute("data-analytics-event", "creator_portfolio");
+    await expect(portfolio.locator("svg")).toHaveAttribute("aria-hidden", "true");
     await credit.scrollIntoViewIfNeeded();
     await credit.screenshot({ path: `${captureDirectory}/creator-${width}-closed.png` });
     const start = credit.locator("summary");
@@ -42,7 +47,7 @@ test("creator contact is accessible, contextual, and responsive", async ({ page 
       await expect(link).toHaveAttribute("target", "_blank");
       await expect(link).toHaveAttribute("rel", "noopener noreferrer");
     }
-    for (const control of [start, whatsapp, email, credit.getByRole("link", { name: /LinkedIn/ }), credit.getByRole("link", { name: /GitHub/ })]) {
+    for (const control of [start, whatsapp, email, credit.getByRole("link", { name: /LinkedIn/ }), credit.getByRole("link", { name: /GitHub/ }), portfolio]) {
       expect((await control.boundingBox())?.height).toBeGreaterThanOrEqual(44);
       expect(await control.getAttribute("data-analytics-event")).toMatch(/^creator_/);
     }

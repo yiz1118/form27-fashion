@@ -10,9 +10,9 @@ All creator information lives in `config/creator.ts`. Its `conceptProject.name` 
 
 No message is sent by opening the disclosure. The fictional shop and newsletter interactions retain their separate purposes.
 
-## Add the portfolio later
+## Portfolio destination
 
-Replace `portfolioUrl: null` in `config/creator.ts` with the full HTTPS URL of the main portfolio, then rebuild/redeploy the website. The `View Portfolio` link will appear automatically beside or below the primary action. Null hides the link completely, with no public placeholder.
+`portfolioUrl` in `config/creator.ts` is set to `https://alson-portfolio-nine.vercel.app/`. The `View Portfolio` link appears beside or below the primary action and opens that site in a new tab. To change the destination later, update this single configuration value and rebuild/redeploy the website. Setting it to `null` hides the link completely, with no public placeholder.
 
 ## Future analytics
 

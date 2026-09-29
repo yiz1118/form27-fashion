@@ -5,9 +5,11 @@ import { createElement } from "react";
 import { CreatorCredit } from "../components/CreatorCredit";
 import { creator } from "../config/creator";
 
-test("portfolio CTA stays hidden until a real URL is configured", () => {
+test("portfolio CTA uses its configured URL and stays hidden when unset", () => {
   const originalURL = creator.portfolioUrl;
   try {
+    assert.equal(originalURL, "https://alson-portfolio-nine.vercel.app/");
+    assert.match(renderToStaticMarkup(createElement(CreatorCredit)), /href="https:\/\/alson-portfolio-nine\.vercel\.app\/"/);
     creator.portfolioUrl = null;
     assert.doesNotMatch(renderToStaticMarkup(createElement(CreatorCredit)), /View Portfolio/);
     creator.portfolioUrl = "https://portfolio.example";
