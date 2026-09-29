@@ -1,0 +1,50 @@
+[
+  {
+    "name": "hero-v2",
+    "prompt": "Use case: ads-marketing. Asset type: landscape 3:2 fashion website campaign hero. Input 1 is the exact coal Axis Trouser reference, input 2 exact chalk Shell Jacket, input 3 exact coal Frame Jacket, input 4 exact chalk Fold Trouser. Garment identity is essential: copy the actual cuts and seams, no added cargo pockets. Axis trouser has a clean front with slanting knee seam, high waist and very wide leg. Shell jacket is plain chalk zip-front with high funnel collar, dropped shoulders and cropped hem, no utility patch pockets. Frame jacket has pointed collar and two geometric flap pockets. Fold trouser has a wrap front with single side waist button and folded knee planes. Subject: two gender-inclusive young adult models wearing these garments, one in Shell Jacket and Axis Trouser, the other in Frame Jacket and Fold Trouser. Fashion editorial on geometric concrete steps, side lighting, hard architectural shadows, premium realistic cloth. Full body, no head or shoes cut off, models on right half and empty concrete wall on left for HTML headline. Open space above models. Monochrome. No logos, text or watermarks.",
+    "references": [
+      "public/images/products/axis-trouser-front.webp",
+      "public/images/products/shell-jacket-front.webp",
+      "public/images/products/frame-jacket-front.webp",
+      "public/images/products/fold-trouser-front.webp"
+    ],
+    "source": "assets/campaign-references/hero-v2.png",
+    "tool": "built-in image_gen",
+    "date": "2026-09-28"
+  },
+  {
+    "name": "campaign-one-v2",
+    "prompt": "Use case: ads-marketing. Asset type: landscape 3:2 premium independent fashion editorial photograph. Input 1 is exact Axis Trouser, input 2 exact Shell Jacket. Keep exact garment identity: charcoal high waist ultra-wide leg with angled knee seam, clean thigh with no cargo pocket, chalk-white plain cropped zip jacket with tall funnel collar and dropped shoulders, no patch pockets. Young adult gender-inclusive fashion model wears these exact pieces while moving through brutalist concrete colonnade. Full body visible with black shoes, architectural side-light, low camera angle, realistic fabric folds and construction from references. Model around center-right, generous concrete negative space, no fake brand markings, no text, no watermark.",
+    "references": [
+      "public/images/products/axis-trouser-front.webp",
+      "public/images/products/shell-jacket-front.webp"
+    ],
+    "source": "assets/campaign-references/campaign-one-v2.png",
+    "tool": "built-in image_gen",
+    "date": "2026-09-28"
+  },
+  {
+    "name": "campaign-two-v2",
+    "prompt": "Use case: ads-marketing. Asset type: portrait 2:3 fashion lookbook photograph. Use all provided images as exact garment design references. Input 1 charcoal Axis Trouser clean wide legs with angled knee seams; input 2 plain chalk Shell Jacket zip and tall funnel collar; input 3 black Frame Jacket pointed collar with two geometric flap pockets; input 4 chalk Fold Trouser wrap front with side button and folded knees. Two young adult gender-inclusive models on concrete rooftop in editorial poses. One wears Frame Jacket and Fold Trouser, other Shell Jacket and Axis Trouser. Garments retain cut, pockets and seams from references without added details. Full body visible, model faces within frame, hard side light, realistic fabric, concrete horizon. Monochrome photographic magazine fashion study. No text, logo or watermark.",
+    "references": [
+      "public/images/products/axis-trouser-front.webp",
+      "public/images/products/shell-jacket-front.webp",
+      "public/images/products/frame-jacket-front.webp",
+      "public/images/products/fold-trouser-front.webp"
+    ],
+    "source": "assets/campaign-references/campaign-two-v2.png",
+    "tool": "built-in image_gen",
+    "date": "2026-09-28"
+  },
+  {
+    "name": "lookbook-detail-v2",
+    "prompt": "Use case: ads-marketing. Asset type: portrait 2:3 fashion editorial detail. Input 1 exact Axis Trouser coal twill, wide leg with angular knee seam; input 2 exact chalk Shell Jacket plain zip front with tall funnel collar. Garment identity must match these two inputs, no extra cargo or utility patch pockets. Young adult fashion model torso and legs cropped from collar to below knees, wearing these exact pieces in raw concrete stairwell. Clear jacket zip, hands and trouser slant knee construction. Sculptural directional daylight, high-end realistic textile photography, monochrome, no text, logos or watermark.",
+    "references": [
+      "public/images/products/axis-trouser-front.webp",
+      "public/images/products/shell-jacket-front.webp"
+    ],
+    "source": "assets/campaign-references/lookbook-detail-v2.png",
+    "tool": "built-in image_gen",
+    "date": "2026-09-28"
+  }
+]

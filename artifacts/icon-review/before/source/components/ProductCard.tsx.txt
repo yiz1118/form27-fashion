@@ -1,0 +1,13 @@
+import Link from "next/link";
+import { formatPrice, type Product } from "@/data/products";
+import { ProductArtwork } from "./ProductArtwork";
+
+export function ProductCard({ product, index = 0, headingLevel = 3 }: { product: Product; index?: number; headingLevel?: 2 | 3 }) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
+  return <article className={`product-card ${index % 4 === 1 ? "product-card-offset" : ""}`}>
+    <Link className="product-card-link" href={`/products/${product.slug}`} aria-label={`View ${product.name}, ${formatPrice(product.priceCents)}`}>
+      <div className="product-card-image"><ProductArtwork product={product} view="worn" /><span className="product-card-tag">{product.code}</span><span className="product-card-hover">EXPLORE PIECE ↗</span></div>
+      <div className="product-card-meta"><div><p className="eyebrow">{product.category} / {product.color}</p><Heading>{product.name}</Heading></div><span>{formatPrice(product.priceCents)}</span></div>
+    </Link>
+  </article>;
+}

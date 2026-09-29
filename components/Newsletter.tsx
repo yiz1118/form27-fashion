@@ -1,0 +1,26 @@
+"use client";
+import { UiIcon } from "@/components/UiIcon";
+import { ArrowUpRight } from "lucide-react";
+import { useRef, useState } from "react";
+
+export function Newsletter() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [invalid, setInvalid] = useState(false);
+  const input = useRef<HTMLInputElement>(null);
+  return <form className="newsletter" noValidate onSubmit={event => {
+    event.preventDefault();
+    if (!input.current?.validity.valid) {
+      setInvalid(true);
+      setMessage("Enter a valid email address.");
+      input.current?.focus();
+      return;
+    }
+    setInvalid(false);
+    setMessage("Concept demo only — no address was saved or subscribed.");
+  }}>
+    <label htmlFor="newsletter-email">Collection notes, if this were a real label.</label>
+    <div className="newsletter-row"><input ref={input} id="newsletter-email" type="email" required placeholder="YOUR EMAIL ADDRESS" autoComplete="email" value={email} aria-invalid={invalid} aria-describedby="newsletter-message" onChange={event => { setEmail(event.target.value); setMessage(""); setInvalid(false); }} /><button type="submit" aria-label="Try newsletter demo"><UiIcon icon={ArrowUpRight} size={27} /></button></div>
+    <p id="newsletter-message" role="status">{message || "Demo interaction. No data is collected."}</p>
+  </form>;
+}

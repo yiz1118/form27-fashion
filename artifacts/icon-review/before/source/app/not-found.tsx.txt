@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <main id="main-content" className="not-found"><p className="eyebrow">404 / OUT OF FRAME</p><h1>THIS FORM<br />IS MISSING<span className="accent-dot">.</span></h1><p>The page or piece you asked for is not in this collection.</p><Link className="black-button" href="/shop">BACK TO THE COLLECTION ↗</Link></main>; }

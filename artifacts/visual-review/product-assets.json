@@ -1,0 +1,242 @@
+[
+  {
+    "file": "axis-trouser-back.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "axis-trouser-detail.webp",
+    "width": 376,
+    "height": 503,
+    "format": "webp"
+  },
+  {
+    "file": "axis-trouser-fabric.webp",
+    "width": 376,
+    "height": 514,
+    "format": "webp"
+  },
+  {
+    "file": "axis-trouser-front.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "axis-trouser-worn.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "base-tee-back.webp",
+    "width": 466,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "base-tee-detail.webp",
+    "width": 488,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "base-tee-fabric.webp",
+    "width": 466,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "base-tee-front.webp",
+    "width": 488,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "base-tee-worn.webp",
+    "width": 486,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "fold-trouser-back.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "fold-trouser-detail.webp",
+    "width": 376,
+    "height": 503,
+    "format": "webp"
+  },
+  {
+    "file": "fold-trouser-fabric.webp",
+    "width": 376,
+    "height": 514,
+    "format": "webp"
+  },
+  {
+    "file": "fold-trouser-front.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "fold-trouser-worn.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "frame-jacket-back.webp",
+    "width": 466,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "frame-jacket-detail.webp",
+    "width": 488,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "frame-jacket-fabric.webp",
+    "width": 466,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "frame-jacket-front.webp",
+    "width": 488,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "frame-jacket-worn.webp",
+    "width": 486,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "line-trouser-back.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "line-trouser-detail.webp",
+    "width": 376,
+    "height": 503,
+    "format": "webp"
+  },
+  {
+    "file": "line-trouser-fabric.webp",
+    "width": 376,
+    "height": 514,
+    "format": "webp"
+  },
+  {
+    "file": "line-trouser-front.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "line-trouser-worn.webp",
+    "width": 380,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "plane-shirt-back.webp",
+    "width": 466,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "plane-shirt-detail.webp",
+    "width": 488,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "plane-shirt-fabric.webp",
+    "width": 466,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "plane-shirt-front.webp",
+    "width": 488,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "plane-shirt-worn.webp",
+    "width": 486,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "shell-jacket-back.webp",
+    "width": 466,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "shell-jacket-detail.webp",
+    "width": 488,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "shell-jacket-fabric.webp",
+    "width": 466,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "shell-jacket-front.webp",
+    "width": 488,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "shell-jacket-worn.webp",
+    "width": 486,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "shift-vest-back.webp",
+    "width": 466,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "shift-vest-detail.webp",
+    "width": 488,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "shift-vest-fabric.webp",
+    "width": 466,
+    "height": 501,
+    "format": "webp"
+  },
+  {
+    "file": "shift-vest-front.webp",
+    "width": 488,
+    "height": 492,
+    "format": "webp"
+  },
+  {
+    "file": "shift-vest-worn.webp",
+    "width": 486,
+    "height": 1024,
+    "format": "webp"
+  }
+]

@@ -1,0 +1,34 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
+import { Menu, X } from "lucide-react";
+import { useCart } from "./CartProvider";
+
+const links = [{ href: "/shop", label: "Shop" }, { href: "/lookbook", label: "Lookbook" }, { href: "/campaign", label: "Campaign" }, { href: "/about", label: "About" }];
+
+export function SiteHeader() {
+  const { count, ready } = useCart();
+  const pathname = usePathname();
+  const dialog = useRef<HTMLDialogElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  useEffect(() => { dialog.current?.close(); }, [pathname]);
+  const close = () => { dialog.current?.close(); trigger.current?.focus(); };
+  return <>
+    <header className="site-shell-header"><a className="skip-link" href="#main-content">Skip to content</a>
+    <div className="concept-strip"><span>FORM / 27 — INDEPENDENT FORM STUDIES</span><strong>CONCEPT PROJECT</strong><span>COLLECTION 01 / OFF — AXIS</span></div>
+    <div className="site-header">
+      <button ref={trigger} type="button" className="menu-trigger" aria-label="Open navigation" onClick={() => dialog.current?.showModal()}><Menu size={22} /></button>
+      <Link className="wordmark" href="/" aria-label="FORM / 27 homepage">FORM<span className="wordmark-slash">/</span>27<span className="wordmark-dot">.</span></Link>
+      <nav className="desktop-nav" aria-label="Primary navigation">{links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined}>{link.label}</Link>)}</nav>
+      <Link className="header-cart" href="/cart">Bag <span aria-label={`${ready ? count : 0} items`}>({ready ? count : 0})</span></Link>
+    </div></header>
+    <dialog ref={dialog} className="menu-dialog" onClick={event => { if (event.target === dialog.current) close(); }} onClose={() => trigger.current?.focus()}>
+      <div className="menu-dialog-inner"><div className="menu-dialog-top"><span className="eyebrow">FORM / 27 — NAVIGATION</span><button type="button" aria-label="Close navigation" onClick={close}><X /></button></div>
+        <nav aria-label="Mobile navigation">{links.map((link, index) => <Link key={link.href} href={link.href} onClick={close}><span>0{index + 1}</span>{link.label}<span>↗</span></Link>)}<Link href="/size-guide" onClick={close}><span>05</span>Size Guide<span>↗</span></Link></nav>
+        <p>Cut for movement. Built around you.</p>
+      </div>
+    </dialog>
+  </>;
+}

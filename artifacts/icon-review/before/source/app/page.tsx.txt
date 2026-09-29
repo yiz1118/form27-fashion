@@ -1,0 +1,19 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowDown, ArrowRight } from "lucide-react";
+import { collection } from "@/data/editorial";
+import { products } from "@/data/products";
+import { ProductCard } from "@/components/ProductCard";
+
+export default function HomePage() {
+  return <main id="main-content">
+    <section className="home-hero" aria-labelledby="hero-title"><Image src="/images/campaign/hero-v2.webp" alt="Two models in sculptural wide-leg trousers and architectural jackets on concrete stairs" fill priority sizes="100vw" className="hero-image" /><div className="hero-shade" /><div className="hero-topline"><span>FORM / 27 STUDIO</span><span>COLLECTION 01 / 2026</span></div><div className="hero-copy"><p className="eyebrow">INDEPENDENT FORM STUDIES / 001</p><h1 id="hero-title">OFF<span>/</span><br />AXIS<span className="accent-dot">.</span></h1><div><p>{collection.line}</p><Link className="hero-cta" href="/shop">SHOP THE COLLECTION <ArrowRight size={20} /></Link></div></div><a className="hero-scroll" href="#new-forms">SCROLL TO EXPLORE <ArrowDown size={17} /></a><div className="hero-vertical">FORM FOLLOWS FEELING — 2026</div></section>
+    <div className="ticker" aria-hidden="true"><div>NEW FORM / NEW MOVEMENT / OFF AXIS / NEW FORM / NEW MOVEMENT / OFF AXIS /</div></div>
+    <section id="new-forms" className="home-intro section-pad"><div className="section-heading"><p className="eyebrow">01 / THE DROP</p><h2>NEW<br /><em>FORMS.</em></h2><div><p>Shapes that refuse to stand still. The first study in volume, utility and the space between.</p><Link className="text-arrow" href="/shop">VIEW ALL 08 PIECES <ArrowRight size={18} /></Link></div></div><div className="home-product-grid">{products.slice(0, 3).map((product, index) => <ProductCard key={product.slug} product={product} index={index} />)}</div></section>
+    <section className="feature-story"><div className="feature-image"><Image src="/images/campaign/campaign-one-v2.webp" alt="Model wearing a white shell jacket and wide charcoal trousers in a concrete colonnade" fill sizes="(max-width: 800px) 100vw, 55vw" /></div><div className="feature-copy"><span className="eyebrow">02 / THE SILHOUETTE</span><div><span className="feature-index">F27 — 01</span><h2>THE<br />AXIS<br /><em>TROUSER.</em></h2><p>A generous silhouette, interrupted by a single seam. Made to change shape when you move.</p><Link className="outline-button" href="/products/axis-trouser">EXPLORE THE PIECE <ArrowRight size={18} /></Link></div><span className="feature-vertical">STRUCTURE / FREEDOM / FORM</span></div></section>
+    <section className="lookbook-teaser section-pad"><div className="teaser-top"><p className="eyebrow">03 / THE LOOKBOOK</p><Link className="text-arrow" href="/lookbook">OPEN THE LOOKBOOK <ArrowRight size={18} /></Link></div><div className="teaser-grid"><div className="teaser-title"><span>VOLUME</span><span>IN MOTION<span className="accent-dot">.</span></span><p>Eight pieces. Infinite points of view.</p></div><div className="teaser-image"><Image src="/images/campaign/campaign-two-v2.webp" alt="Two models in monochrome utility clothing on a concrete rooftop" fill sizes="(max-width: 800px) 100vw, 45vw" /></div></div></section>
+    <section className="campaign-strip"><Image src="/images/campaign/lookbook-detail-v2.webp" alt="Close detail of a structured chalk jacket and charcoal trouser" fill sizes="100vw" /><div><p className="eyebrow">04 / THE CAMPAIGN</p><h2>BODY.<br />SPACE.<br /><em>SHAPE.</em></h2><Link href="/campaign">ENTER OFF / AXIS <ArrowRight size={18} /></Link></div></section>
+    <section className="manifesto section-pad"><p className="eyebrow">05 / WHAT WE BELIEVE</p><blockquote>“CLOTHES SHOULD MAKE <em>SPACE</em> FOR THE BODY.”</blockquote><div><p>{collection.manifesto}</p><Link className="text-arrow" href="/about">THE IDEA BEHIND FORM / 27 <ArrowRight size={18} /></Link></div></section>
+  </main>;
+}
+

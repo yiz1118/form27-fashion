@@ -1,0 +1,10 @@
+import { UiIcon } from "@/components/UiIcon";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { collection } from "@/data/editorial";
+
+export const metadata: Metadata = { title: "About the Concept", description: "The fictional philosophy and design study behind FORM / 27." };
+export default function AboutPage() { return <main id="main-content" className="about-page"><section className="about-hero"><div className="page-intro"><p className="eyebrow">THE IDEA / FORM 27</p><h1>MADE FOR<br /><em>MOVEMENT</em><span className="accent-dot">.</span></h1><p>{collection.manifesto}</p></div><div><Image src="/images/campaign/lookbook-detail-v2.webp" alt="Editorial detail of structured clothing against a concrete wall" fill priority sizes="(max-width: 800px) 100vw, 42vw" /></div></section><section className="about-principles section-pad"><p className="eyebrow">THREE STUDIES / ONE POINT OF VIEW</p><article><span>01</span><h2>ROOM</h2><p>Proportion gives the body freedom. Each form holds its own outline while leaving space to move.</p></article><article><span>02</span><h2>STRUCTURE</h2><p>Strong seams, exacting pockets and thoughtful fabric choices make the shape visible from every angle.</p></article><article><span>03</span><h2>INTERRUPTION</h2><p>One unexpected cut or flash of color can change how a familiar garment feels.</p></article></section><section className="about-note"><div><span className="eyebrow">A NOTE ON THIS PROJECT</span><h2>AN IMAGINED<br />LABEL.</h2></div><div><p>FORM / 27 is an original fictional brand created to demonstrate fashion art direction, digital design, product architecture and shopping UX. Products, prices, availability and measurements are illustrative. Campaign and product photographs are AI-generated concept imagery.</p><p>No items are for sale. The cart and checkout summary are interactive demonstrations; they collect no payment details and create no orders.</p><Link className="outline-button" href="/shop">EXPLORE THE CONCEPT <UiIcon icon={ArrowRight} size={18} /></Link></div></section></main>; }
+

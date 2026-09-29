@@ -1,0 +1,242 @@
+[
+  {
+    "route": "/",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/shop",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/lookbook",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/campaign",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/about",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/cart",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/size-guide",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/shop",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/lookbook",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/campaign",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/about",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/cart",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/size-guide",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "route": "/",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/shop",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/lookbook",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/campaign",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/about",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/cart",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/size-guide",
+    "width": 430,
+    "scrollWidth": 430
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/shop",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/lookbook",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/campaign",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/about",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/cart",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/size-guide",
+    "width": 768,
+    "scrollWidth": 768
+  },
+  {
+    "route": "/",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/shop",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/lookbook",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/campaign",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/about",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/cart",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/size-guide",
+    "width": 1024,
+    "scrollWidth": 1024
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "/shop",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "/lookbook",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "/campaign",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "/about",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "/cart",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "/size-guide",
+    "width": 1440,
+    "scrollWidth": 1440
+  }
+]

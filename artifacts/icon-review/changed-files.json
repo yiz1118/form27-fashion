@@ -1,0 +1,50 @@
+[
+  {
+    "file": "app/page.tsx",
+    "changed": true
+  },
+  {
+    "file": "app/about/page.tsx",
+    "changed": true
+  },
+  {
+    "file": "app/campaign/page.tsx",
+    "changed": true
+  },
+  {
+    "file": "app/lookbook/page.tsx",
+    "changed": true
+  },
+  {
+    "file": "app/size-guide/page.tsx",
+    "changed": true
+  },
+  {
+    "file": "app/not-found.tsx",
+    "changed": true
+  },
+  {
+    "file": "components/CartPage.tsx",
+    "changed": true
+  },
+  {
+    "file": "components/ProductExperience.tsx",
+    "changed": true
+  },
+  {
+    "file": "components/ProductCard.tsx",
+    "changed": true
+  },
+  {
+    "file": "components/SiteHeader.tsx",
+    "changed": true
+  },
+  {
+    "file": "components/ShopClient.tsx",
+    "changed": true
+  },
+  {
+    "file": "components/Newsletter.tsx",
+    "changed": true
+  }
+]

@@ -1,0 +1,1050 @@
+[
+  {
+    "route": "/",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/shop",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/shop",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/shop",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/lookbook",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/campaign",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/campaign",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/campaign",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/about",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/about",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/about",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/cart",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/cart",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/cart",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15,
+    "after": 13
+  },
+  {
+    "route": "/size-guide",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 375,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/shop",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/shop",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/shop",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/lookbook",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/campaign",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/campaign",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/campaign",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/about",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/about",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/about",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/cart",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/cart",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/cart",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 15.59375,
+    "after": 13.59375
+  },
+  {
+    "route": "/size-guide",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 390,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/shop",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/shop",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/shop",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/lookbook",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/campaign",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/campaign",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/campaign",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/about",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/about",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/about",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/cart",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/cart",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/cart",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 17.1875,
+    "after": 15.1875
+  },
+  {
+    "route": "/size-guide",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 430,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/shop",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/shop",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/shop",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/lookbook",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 768,
+    "element": "H2",
+    "property": "x",
+    "before": 282.46875,
+    "after": 281.875
+  },
+  {
+    "route": "/campaign",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/campaign",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/campaign",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/about",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/about",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/about",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/cart",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/cart",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/cart",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "x",
+    "before": 30.71875,
+    "after": 28.71875
+  },
+  {
+    "route": "/size-guide",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 768,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/shop",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/shop",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 1024,
+    "element": "H2",
+    "property": "x",
+    "before": 647.296875,
+    "after": 646.703125
+  },
+  {
+    "route": "/campaign",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/campaign",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/about",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/about",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/cart",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/cart",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 1024,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/shop",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/shop",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/products/axis-trouser",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/lookbook",
+    "width": 1440,
+    "element": "H2",
+    "property": "x",
+    "before": 922.96875,
+    "after": 922.375
+  },
+  {
+    "route": "/campaign",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/campaign",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/about",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/about",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/cart",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/cart",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "padding",
+    "before": "9px",
+    "after": "11px"
+  },
+  {
+    "route": "/size-guide",
+    "width": 1440,
+    "element": "menu-trigger",
+    "property": "margin",
+    "before": "0px",
+    "after": "0px -2px"
+  }
+]

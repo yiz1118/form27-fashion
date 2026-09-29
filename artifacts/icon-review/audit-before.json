@@ -1,0 +1,504 @@
+{
+  "filesScanned": 39,
+  "files": [
+    "app\\about\\page.tsx",
+    "app\\campaign\\page.tsx",
+    "app\\cart\\page.tsx",
+    "app\\globals.css",
+    "app\\layout.tsx",
+    "app\\lookbook\\page.tsx",
+    "app\\not-found.tsx",
+    "app\\page.tsx",
+    "app\\products\\[slug]\\page.tsx",
+    "app\\shop\\page.tsx",
+    "app\\size-guide\\page.tsx",
+    "components\\CartPage.tsx",
+    "components\\CartProvider.tsx",
+    "components\\Newsletter.tsx",
+    "components\\ProductArtwork.tsx",
+    "components\\ProductCard.tsx",
+    "components\\ProductExperience.tsx",
+    "components\\ProductGallery.tsx",
+    "components\\ShopClient.tsx",
+    "components\\SiteFooter.tsx",
+    "components\\SiteHeader.tsx",
+    "components\\SizeChart.tsx",
+    "data\\editorial.ts",
+    "data\\products.ts",
+    "data\\size-charts.ts",
+    "eslint.config.mjs",
+    "lib\\cart.ts",
+    "lib\\shop.ts",
+    "next-env.d.ts",
+    "next.config.ts",
+    "playwright.config.ts",
+    "postcss.config.mjs",
+    "scripts\\audit-ui-icons.mjs",
+    "scripts\\prepare-images.mjs",
+    "scripts\\review-icons.mjs",
+    "scripts\\review-layouts.mjs",
+    "tests\\browser\\icons.spec.ts",
+    "tests\\browser\\store.spec.ts",
+    "tests\\shop.test.ts"
+  ],
+  "hits": [
+    {
+      "file": "app/globals.css",
+      "line": 10,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "ont-size:11px}.filter-size-grid input:checked+span{background:var(--ink);color:var(--white);border-color:var(-"
+    },
+    {
+      "file": "app/globals.css",
+      "line": 10,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "(--ink)}.filter-size-grid input:focus-visible+span{outline:3px solid #7d9500;outline-offset:2px}.filter-price "
+    },
+    {
+      "file": "app/lookbook/page.tsx",
+      "line": 14,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "ducts/fold-trouser\">EXPLORE THE FOLD TROUSER ↗</Link></div></div></section>"
+    },
+    {
+      "file": "app/not-found.tsx",
+      "line": 2,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "-button\" href=\"/shop\">BACK TO THE COLLECTION ↗</Link></main>; }"
+    },
+    {
+      "file": "app/shop/page.tsx",
+      "line": 7,
+      "symbol": "…",
+      "codePoint": "U+2026",
+      "context": "<p className=\"section-pad\">Loading collection…</p>}><ShopClient /></Suspense></main>;"
+    },
+    {
+      "file": "components/CartPage.tsx",
+      "line": 14,
+      "symbol": "…",
+      "codePoint": "U+2026",
+      "context": "></h1></div><p aria-live=\"polite\">Loading bag…</p></main>;"
+    },
+    {
+      "file": "components/CartPage.tsx",
+      "line": 16,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "changeQuantity(item.variantId, item.quantity + 1)} disabled={item.quantity >= 99} aria-label={`Increase quanti"
+    },
+    {
+      "file": "components/CartPage.tsx",
+      "line": 17,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": ") => summary.current?.close()}>RETURN TO BAG ↗</button></div></dialog>"
+    },
+    {
+      "file": "components/CartProvider.tsx",
+      "line": 41,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": ", count: items.reduce((count, item) => count + item.quantity, 0), subtotalCents: subtotal(items), ready, add, "
+    },
+    {
+      "file": "components/Newsletter.tsx",
+      "line": 21,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "pe=\"submit\" aria-label=\"Try newsletter demo\">↗</button></div>"
+    },
+    {
+      "file": "components/ProductCard.tsx",
+      "line": 9,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "className=\"product-card-hover\">EXPLORE PIECE ↗</span></div>"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 28,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "</strong><Link href=\"/size-guide\">SIZE GUIDE ↗</Link></legend><div>{product.variants.map(variant => <button ty"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 28,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "ons\"><details open><summary>FIT & FORM <span>+</span></summary><p>{product.fit}</p></details><details><summary"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 28,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "p></details><details><summary>MATERIAL <span>+</span></summary><p>{product.material}</p></details><details><su"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 28,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "l}</p></details><details><summary>CARE <span>+</span></summary><p>{product.care}</p></details><details><summar"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 28,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "details><details><summary>CONCEPT NOTE <span>+</span></summary><p>This is a fictional product in a design conc"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "n\" onClick={addSelected}>{size ? \"ADD TO BAG ↗\" : \"CHOOSE SIZE ↗\"}</button></div>"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "ected}>{size ? \"ADD TO BAG ↗\" : \"CHOOSE SIZE ↗\"}</button></div>"
+    },
+    {
+      "file": "components/ProductGallery.tsx",
+      "line": 41,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "            selectView(index + (event.key === \"ArrowRight\" ? 1 : -1));"
+    },
+    {
+      "file": "components/ProductGallery.tsx",
+      "line": 53,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "allery[index]?.label.toUpperCase()} — {index + 1}/5</span></div>"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 31,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "st selectedCount = filters.categories.length + filters.sizes.length + filters.colors.length + Number(filters.m"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 31,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "ers.categories.length + filters.sizes.length + filters.colors.length + Number(filters.maxPrice !== null);"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 31,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "filters.sizes.length + filters.colors.length + Number(filters.maxPrice !== null);"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 37,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "rs: [], maxPrice: null })}>CLEAR ALL FILTERS ↗</button>}"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 41,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "colors: [], maxPrice: null })}>CLEAR FILTERS ↗</button></div>}</div></div>"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 42,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "\" onClick={close}>VIEW {shown.length} PIECES ↗</button></div></dialog>"
+    },
+    {
+      "file": "components/SiteHeader.tsx",
+      "line": 29,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "ef={link.href} onClick={close}><span>0{index + 1}</span>{link.label}<span>↗</span></Link>)}<Link href=\"/size-g"
+    },
+    {
+      "file": "components/SiteHeader.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "}><span>0{index + 1}</span>{link.label}<span>↗</span></Link>)}<Link href=\"/size-guide\" onClick={close}><span>0"
+    },
+    {
+      "file": "components/SiteHeader.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "Click={close}><span>05</span>Size Guide<span>↗</span></Link></nav>"
+    },
+    {
+      "file": "components/SizeChart.tsx",
+      "line": 17,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "      <div><p className=\"eyebrow\">0{index + 1} / FIT REFERENCE</p><h2>{chart.name}</h2><p>{chart.note}</p><"
+    },
+    {
+      "file": "data/products.ts",
+      "line": 56,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": " priceCents: 14800, color: \"Coal\", code: \"F27–01\", tagline: \"A new line of movement.\", fit: \"Generous wide leg"
+    },
+    {
+      "file": "data/products.ts",
+      "line": 57,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": "priceCents: 16400, color: \"Chalk\", code: \"F27–02\", tagline: \"Volume, reconsidered.\", fit: \"Extra-wide leg, rel"
+    },
+    {
+      "file": "data/products.ts",
+      "line": 58,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": "ceCents: 13800, color: \"Graphite\", code: \"F27–03\", tagline: \"The quieter departure.\", fit: \"Relaxed through th"
+    },
+    {
+      "file": "data/products.ts",
+      "line": 59,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": "priceCents: 22800, color: \"Chalk\", code: \"F27–04\", tagline: \"A layer with its own shape.\", fit: \"Boxy and crop"
+    },
+    {
+      "file": "data/products.ts",
+      "line": 60,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": " priceCents: 24600, color: \"Coal\", code: \"F27–05\", tagline: \"A deliberate outline.\", fit: \"Straight boxy body,"
+    },
+    {
+      "file": "data/products.ts",
+      "line": 61,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": "priceCents: 11200, color: \"Stone\", code: \"F27–06\", tagline: \"A shirt with space to breathe.\", fit: \"Oversized "
+    },
+    {
+      "file": "data/products.ts",
+      "line": 62,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": ", priceCents: 5800, color: \"Coal\", code: \"F27–07\", tagline: \"The shape beneath everything.\", fit: \"Boxy cut, d"
+    },
+    {
+      "file": "data/products.ts",
+      "line": 63,
+      "symbol": "–",
+      "codePoint": "U+2013",
+      "context": "riceCents: 17600, color: \"Citron\", code: \"F27–08\", tagline: \"The season’s interruption.\", fit: \"Boxy sleeveles"
+    },
+    {
+      "file": "lib/cart.ts",
+      "line": 18,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "ng.quantity = Math.min(99, existing.quantity + candidate.quantity);"
+    },
+    {
+      "file": "lib/cart.ts",
+      "line": 29,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "..item, quantity: Math.min(99, item.quantity + 1) } : item) : [...items, { variantId, quantity: 1 }];"
+    },
+    {
+      "file": "lib/cart.ts",
+      "line": 39,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "  return items.reduce((sum, item) => sum + (variantById(item.variantId)?.product.priceCents ?? 0) * item.q"
+    },
+    {
+      "file": "scripts/audit-ui-icons.mjs",
+      "line": 5,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "197\\u2192\\u27a1\\u2190\\u2b05\\u2193\\u2b07\\u2191+\\u2212\\u2013\\u00d7\\u2715\\u2716\\u2630\\u2637\\u22ef\\u2026\\u2713\\u27"
+    },
+    {
+      "file": "scripts/audit-ui-icons.mjs",
+      "line": 16,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "ile: file.replaceAll(\"\\\\\", \"/\"), line: index + 1, symbol: match[0], codePoint: `U+${match[0].codePointAt(0).to"
+    },
+    {
+      "file": "scripts/audit-ui-icons.mjs",
+      "line": 16,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "e: index + 1, symbol: match[0], codePoint: `U+${match[0].codePointAt(0).toString(16).toUpperCase().padStart(4,"
+    },
+    {
+      "file": "scripts/audit-ui-icons.mjs",
+      "line": 16,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "e(Math.max(0, match.index - 45), match.index + 65) });"
+    },
+    {
+      "file": "scripts/audit-ui-icons.mjs",
+      "line": 22,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "s, variationSelectors: hits.filter(hit => /U\\+FE0[EF]/.test(hit.codePoint)), arrowHits: hits.filter(hit => /[\\"
+    },
+    {
+      "file": "scripts/review-icons.mjs",
+      "line": 18,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "y < document.documentElement.scrollHeight; y += 650) {"
+    },
+    {
+      "file": "scripts/review-layouts.mjs",
+      "line": 7,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "st cellHeight = Math.ceil(900 * 360 / width) + 32;"
+    },
+    {
+      "file": "scripts/review-layouts.mjs",
+      "line": 14,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "370, top: Math.floor(index / 4) * cellHeight + 30 });"
+    },
+    {
+      "file": "tests/browser/store.spec.ts",
+      "line": 8,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "y < document.documentElement.scrollHeight; y += 700) {"
+    },
+    {
+      "file": "tests/browser/store.spec.ts",
+      "line": 181,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "nt.documentElement.scrollWidth <= innerWidth + 1), `Populated bag at ${width}px`).toBe(true);"
+    },
+    {
+      "file": "tests/browser/store.spec.ts",
+      "line": 239,
+      "symbol": "+",
+      "codePoint": "U+002B",
+      "context": "umentElement.scrollWidth > window.innerWidth + 1);"
+    }
+  ],
+  "variationSelectors": [],
+  "arrowHits": [
+    {
+      "file": "app/lookbook/page.tsx",
+      "line": 14,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "ducts/fold-trouser\">EXPLORE THE FOLD TROUSER ↗</Link></div></div></section>"
+    },
+    {
+      "file": "app/not-found.tsx",
+      "line": 2,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "-button\" href=\"/shop\">BACK TO THE COLLECTION ↗</Link></main>; }"
+    },
+    {
+      "file": "components/CartPage.tsx",
+      "line": 17,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": ") => summary.current?.close()}>RETURN TO BAG ↗</button></div></dialog>"
+    },
+    {
+      "file": "components/Newsletter.tsx",
+      "line": 21,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "pe=\"submit\" aria-label=\"Try newsletter demo\">↗</button></div>"
+    },
+    {
+      "file": "components/ProductCard.tsx",
+      "line": 9,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "className=\"product-card-hover\">EXPLORE PIECE ↗</span></div>"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 28,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "</strong><Link href=\"/size-guide\">SIZE GUIDE ↗</Link></legend><div>{product.variants.map(variant => <button ty"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "n\" onClick={addSelected}>{size ? \"ADD TO BAG ↗\" : \"CHOOSE SIZE ↗\"}</button></div>"
+    },
+    {
+      "file": "components/ProductExperience.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "ected}>{size ? \"ADD TO BAG ↗\" : \"CHOOSE SIZE ↗\"}</button></div>"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 37,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "rs: [], maxPrice: null })}>CLEAR ALL FILTERS ↗</button>}"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 41,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "colors: [], maxPrice: null })}>CLEAR FILTERS ↗</button></div>}</div></div>"
+    },
+    {
+      "file": "components/ShopClient.tsx",
+      "line": 42,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "\" onClick={close}>VIEW {shown.length} PIECES ↗</button></div></dialog>"
+    },
+    {
+      "file": "components/SiteHeader.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "}><span>0{index + 1}</span>{link.label}<span>↗</span></Link>)}<Link href=\"/size-guide\" onClick={close}><span>0"
+    },
+    {
+      "file": "components/SiteHeader.tsx",
+      "line": 29,
+      "symbol": "↗",
+      "codePoint": "U+2197",
+      "context": "Click={close}><span>05</span>Size Guide<span>↗</span></Link></nav>"
+    }
+  ]
+}
