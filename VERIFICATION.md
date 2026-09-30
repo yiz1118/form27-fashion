@@ -1,5 +1,28 @@
 # FORM / 27 — verification report
 
+## Motion polish verification — 2026-09-30
+
+The finished motion changes were tested against the local production build. The existing typography, color tokens, page structure, editorial copy, shopping destinations and creator configuration are retained. The new favicon uses the existing palette and resolves Chrome's previously missing `/favicon.ico` request through Next's generated SVG icon metadata.
+
+| Check | Result |
+|---|---|
+| `npm run lint` | PASS, no errors or warnings |
+| `npm run typecheck` | PASS |
+| `npm test` | PASS, 4 tests |
+| `npm run build` | PASS, 18 generated routes including the SVG icon |
+| `npm run test:browser` | PASS, 17 tests; 2.5 minutes |
+| `npx playwright test --config playwright.motion.config.ts --workers=2` | PASS, 20 tests; 2.3 minutes |
+
+The full-site suite covers all eight page types, all eight product routes, filtering, sorting, gallery controls, cart persistence and quantities, keyboard shopping, mobile dialogs, creator links and automated accessibility. All eight page types and the populated bag pass horizontal-overflow checks at 375, 390, 430, 768, 1024 and 1440px. Automated Axe scans report zero violations on the covered pages and populated mobile bag.
+
+The additional motion suite runs on desktop Chrome, desktop WebKit, Pixel 7 Chrome emulation and iPhone 13 WebKit emulation. Home and lookbook are checked at all six widths in each profile, including image playback and expanded creator contact choices. All four editorial routes retain identical layout dimensions before and after playback. Chromium's layout-shift observer records zero motion-related shifts; WebKit also passes the geometry checks. Reveals play once, release animation effects on completion, and remain fully visible without JavaScript or IntersectionObserver. Initial reduced motion disables playback, and a preference change during playback cancels the effects. Native menu Escape dismissal returns focus, and link activation does not wait for animation.
+
+No console or page errors were detected in the motion checks. A separate production navigation pass through all 15 valid page/product URLs also reports zero console or page errors. Desktop and mobile settled screenshots and sampled horizontal image-crop frames were visually reviewed. Reports and fresh motion captures are retained locally under `test-results/motion/` and `test-results/motion-report/`. Existing tracked reference captures are preserved.
+
+WebKit and mobile emulation provide browser-engine compatibility checks; physical iPhone/Android devices and the Safari application were not tested. No Lighthouse score or deployment verification is claimed.
+
+## Earlier project verification — 2026-09-28
+
 Verified on **2026-09-28**, Windows, Node.js **24.13.0**, npm **11.6.2**. The browser acceptance suite ran against a local **Next.js 16.3.6 production build** using installed Google Chrome through Playwright. The separate review preview runs at `http://localhost:3106` while its server is active.
 
 ## Command results

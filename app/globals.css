@@ -126,3 +126,56 @@ button,select{color:inherit}.newsletter-row button{display:grid;place-items:cent
   .creator-title { margin-bottom: 16px; }
   .creator-inquiry h3 { margin-bottom: 22px; }
 }
+
+/* FORM / 27 motion: clipped type, photographic crops and quick directional feedback. */
+:root { --motion-ease: cubic-bezier(.22, 1, .36, 1); --motion-ui: 180ms; }
+[data-motion="image"] { overflow: hidden; }
+.desktop-nav a::after {
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-ui) var(--motion-ease);
+}
+.desktop-nav a:hover::after, .desktop-nav a:focus-visible::after, .desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
+:where(a, button) > :is(.lucide-arrow-right, .lucide-arrow-up-right, .lucide-arrow-down),
+.menu-dialog nav a > span > .ui-icon { transition: transform var(--motion-ui) var(--motion-ease); }
+.hero-cta, .text-arrow, .creator-contact summary, .creator-socials a, .creator-portfolio,
+.size-options button, .unit-toggle button, .gallery-thumbs button, .mobile-buy-bar button,
+.menu-trigger, .menu-dialog-top button, .filter-dialog-head button, .newsletter-row button {
+  transition: background-color var(--motion-ui), color var(--motion-ui), border-color var(--motion-ui), transform var(--motion-ui) var(--motion-ease);
+}
+.product-card-image .product-artwork { transition: transform 300ms var(--motion-ease); }
+.product-card-hover { transition: transform 220ms var(--motion-ease); }
+.product-card-link:focus-visible .product-artwork { transform: scale(1.04); }
+.product-card-link:focus-visible .product-card-hover { transform: translateY(0); }
+.gallery-thumbs .product-artwork { transition: transform 220ms var(--motion-ease); }
+.creator-contact summary > .ui-icon, .product-accordions summary > span { transition: transform var(--motion-ui) var(--motion-ease); }
+.menu-dialog[open] .menu-dialog-inner { animation: menu-enter 220ms var(--motion-ease); }
+.filter-dialog[open] .filter-dialog-inner { animation: filter-enter 220ms var(--motion-ease); }
+.creator-contact[open] .creator-contact-options { animation: contact-enter 180ms var(--motion-ease); }
+@keyframes menu-enter { from { opacity: .65; transform: translateX(-16px); } to { opacity: 1; transform: none; } }
+@keyframes filter-enter { from { opacity: .65; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+@keyframes contact-enter { from { opacity: .65; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (hover: hover) and (pointer: fine) {
+  :where(a, button):hover > .lucide-arrow-right { transform: translateX(4px); }
+  :where(a, button):hover > .lucide-arrow-up-right, .menu-dialog nav a:hover > span > .ui-icon { transform: translate(3px, -3px); }
+  .hero-scroll:hover > .ui-icon { transform: translateY(4px); }
+  .gallery-thumbs button:hover .product-artwork { transform: scale(1.035); }
+  .menu-trigger:hover, .menu-dialog-top button:hover, .filter-dialog-head button:hover { background: color-mix(in srgb, currentColor 8%, transparent); }
+}
+:where(a, button):focus-visible > .lucide-arrow-right { transform: translateX(4px); }
+:where(a, button):focus-visible > .lucide-arrow-up-right, .menu-dialog nav a:focus-visible > span > .ui-icon { transform: translate(3px, -3px); }
+.gallery-thumbs button:focus-visible .product-artwork { transform: scale(1.035); }
+.black-button:active, .outline-button:active, .hero-cta:active,
+.menu-trigger:active, .menu-dialog-top button:active, .filter-dialog-head button:active,
+.size-options button:not(:disabled):active, .unit-toggle button:active, .mobile-buy-bar button:active,
+.newsletter-row button:active, .creator-contact summary:active { transform: scale(.985); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  :where(a, button) > :is(.lucide-arrow-right, .lucide-arrow-up-right, .lucide-arrow-down),
+  .menu-dialog nav a > span > .ui-icon,
+  .product-card-link .product-artwork, .gallery-thumbs .product-artwork,
+  .black-button, .outline-button, .hero-cta, .menu-trigger, .menu-dialog-top button,
+  .filter-dialog-head button, .size-options button, .unit-toggle button,
+  .mobile-buy-bar button, .newsletter-row button, .creator-contact summary { transform: none !important; }
+}

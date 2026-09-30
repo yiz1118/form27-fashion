@@ -42,6 +42,20 @@ The campaign, lookbook, product content, and category-specific size charts live 
 
 The newsletter only demonstrates validation and does not save addresses. The checkout button opens a demo summary. The site is marked `noindex` because it is a portfolio concept and has no live store operations.
 
+## Editorial motion
+
+`components/MotionReveal.tsx` provides three one-time IntersectionObserver reveals: clipped type, a horizontal image crop, and a small photographic scale with a shallow crop. Home, lookbook, campaign and About use selected reveals while shopping controls, body copy, hero photographs and creator contact details remain immediately available. The component keeps the original HTML element, leaves server-rendered content visible, and cleans up observers, preference listeners and Web Animations effects. Reduced motion skips reveals; changing that preference during playback cancels the effects. Mobile uses shorter durations and less travel.
+
+`app/globals.css` defines the 180ms interaction timing, directional SVG-arrow feedback, keyboard product-image feedback, tap states and 220ms native-dialog entrances. Navigation and dismissal never wait for playback. There are no continuous animation loops or scroll handlers.
+
+After building, run the motion checks on Chrome, WebKit and mobile emulations:
+
+```powershell
+npx playwright test --config playwright.motion.config.ts
+```
+
+This suite starts its production server on port 3108. Screenshots and traces are saved under ignored `test-results/motion/`; its HTML report is in `test-results/motion-report/`. Physical-device Safari and Android verification remains a separate check.
+
 ## Project structure
 
 ```text
