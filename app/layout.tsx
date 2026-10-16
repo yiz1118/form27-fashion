@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import "@fontsource/archivo/400.css";
-import "@fontsource/archivo/500.css";
-import "@fontsource/archivo/600.css";
-import "@fontsource/archivo/700.css";
-import "@fontsource/archivo-black/400.css";
-import "@fontsource/barlow-condensed/600.css";
+import "@fontsource-variable/mona-sans/wdth.css";
+import "@fontsource-variable/martian-mono/wdth.css";
 import "./globals.css";
 import { CartProvider } from "@/components/CartProvider";
+import { MotionProvider } from "@/components/MotionProvider";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { conceptProject, creator } from "@/config/creator";
+import { motionBootScript } from "@/lib/motion-pref";
 
 export const metadata: Metadata = {
   title: { default: "FORM / 27 — OFF / AXIS", template: "%s | FORM / 27" },
@@ -19,5 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><CartProvider><SiteHeader />{children}<SiteFooter /></CartProvider></body></html>;
+  // The boot script sets data-motion before first paint, so <html> attributes legitimately differ from the server render.
+  return <html lang="en" data-motion="full" suppressHydrationWarning>
+    <head><script dangerouslySetInnerHTML={{ __html: motionBootScript }} /></head>
+    <body><MotionProvider><CartProvider><SiteHeader />{children}<SiteFooter /></CartProvider></MotionProvider></body>
+  </html>;
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, type HTMLAttributes } from "react";
+import { isReduced, subscribe } from "@/lib/motion-pref";
 
 type RevealVariant = "type" | "crop" | "image";
 type MotionRevealProps = HTMLAttributes<HTMLElement> & {
@@ -18,7 +19,7 @@ export function MotionReveal({ as = "div", variant = "type", children, ...props 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const preference = { get matches() { return isReduced(); } };
     if (preference.matches || typeof IntersectionObserver !== "function" || !element.animate) {
       element.dataset.motionState = preference.matches ? "reduced" : "complete";
       return;
@@ -74,14 +75,14 @@ export function MotionReveal({ as = "div", variant = "type", children, ...props 
       if (entries.some(entry => entry.isIntersecting)) reveal();
     }, { threshold: 0.08, rootMargin: "0px 0px 48px 0px" });
     observer.observe(element);
-    preference.addEventListener("change", onPreferenceChange);
+    const unsubscribe = subscribe(onPreferenceChange);
     document.addEventListener("visibilitychange", onVisibilityChange);
     element.addEventListener("focusin", finish);
 
     return () => {
       observer.disconnect();
       animations.forEach(animation => animation.cancel());
-      preference.removeEventListener("change", onPreferenceChange);
+      unsubscribe();
       document.removeEventListener("visibilitychange", onVisibilityChange);
       element.removeEventListener("focusin", finish);
     };

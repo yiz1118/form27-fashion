@@ -14,7 +14,7 @@ export function SizeChart() {
       <button type="button" aria-pressed={unit === "in"} onClick={() => setUnit("in")}>IN</button>
     </div>
     {sizeCharts.map((chart, index) => <section key={chart.name} className="chart-section">
-      <div><p className="eyebrow">0{index + 1} / FIT REFERENCE</p><h2>{chart.name}</h2><p>{chart.note}</p></div>
+      <div><h2>{chart.name}</h2><p className="sheet-note">0{index + 1} / Fit reference</p><p>{chart.note}</p></div>
       <div className="chart-scroll" role="region" aria-label={`${chart.name} measurements; scroll horizontally for more columns`} tabIndex={0}>
         <table>
           <caption className="sr-only">{chart.name} garment measurements in {unit}</caption>

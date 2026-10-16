@@ -1,21 +1,26 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { MotionReveal } from "@/components/MotionReveal";
 import { UiIcon } from "@/components/UiIcon";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { HeroPlan } from "@/components/home/HeroPlan";
+import { AxisTrack } from "@/components/home/AxisTrack";
+import { ElevationFeature } from "@/components/home/ElevationFeature";
+import { SectionCut } from "@/components/home/SectionCut";
+import { FrameStack } from "@/components/home/FrameStack";
 import { collection } from "@/data/editorial";
 import { products } from "@/data/products";
-import { ProductCard } from "@/components/ProductCard";
 
 export default function HomePage() {
-  return <main id="main-content">
-    <section className="home-hero" aria-labelledby="hero-title"><Image src="/images/campaign/hero-v2.webp" alt="Two models in sculptural wide-leg trousers and architectural jackets on concrete stairs" fill priority sizes="100vw" className="hero-image" /><div className="hero-shade" /><div className="hero-topline"><span>FORM / 27 STUDIO</span><span>COLLECTION 01 / 2026</span></div><div className="hero-copy"><p className="eyebrow">INDEPENDENT FORM STUDIES / 001</p><MotionReveal as="h1" id="hero-title">OFF<span>/</span><br />AXIS<span className="accent-dot">.</span></MotionReveal><div><p>{collection.line}</p><Link className="hero-cta" href="/shop">SHOP THE COLLECTION <UiIcon icon={ArrowRight} size={20} /></Link></div></div><a className="hero-scroll" href="#new-forms">SCROLL TO EXPLORE <UiIcon icon={ArrowDown} size={17} /></a><div className="hero-vertical">FORM FOLLOWS FEELING — 2026</div></section>
-    <div className="ticker" aria-hidden="true"><div>NEW FORM / NEW MOVEMENT / OFF AXIS / NEW FORM / NEW MOVEMENT / OFF AXIS /</div></div>
-    <section id="new-forms" className="home-intro section-pad"><div className="section-heading"><p className="eyebrow">01 / THE DROP</p><MotionReveal as="h2">NEW<br /><em>FORMS.</em></MotionReveal><div><p>Shapes that refuse to stand still. The first study in volume, utility and the space between.</p><Link className="text-arrow" href="/shop">VIEW ALL 08 PIECES <UiIcon icon={ArrowRight} size={18} /></Link></div></div><div className="home-product-grid">{products.slice(0, 3).map((product, index) => <ProductCard key={product.slug} product={product} index={index} />)}</div></section>
-    <section className="feature-story"><MotionReveal variant="crop" className="feature-image"><Image src="/images/campaign/campaign-one-v2.webp" alt="Model wearing a white shell jacket and wide charcoal trousers in a concrete colonnade" fill sizes="(max-width: 800px) 100vw, 55vw" /></MotionReveal><div className="feature-copy"><span className="eyebrow">02 / THE SILHOUETTE</span><div><span className="feature-index">F27 — 01</span><MotionReveal as="h2">THE<br />AXIS<br /><em>TROUSER.</em></MotionReveal><p>A generous silhouette, interrupted by a single seam. Made to change shape when you move.</p><Link className="outline-button" href="/products/axis-trouser">EXPLORE THE PIECE <UiIcon icon={ArrowRight} size={18} /></Link></div><span className="feature-vertical">STRUCTURE / FREEDOM / FORM</span></div></section>
-    <section className="lookbook-teaser section-pad"><div className="teaser-top"><p className="eyebrow">03 / THE LOOKBOOK</p><Link className="text-arrow" href="/lookbook">OPEN THE LOOKBOOK <UiIcon icon={ArrowRight} size={18} /></Link></div><div className="teaser-grid"><div className="teaser-title"><span>VOLUME</span><span>IN MOTION<span className="accent-dot">.</span></span><p>Eight pieces. Infinite points of view.</p></div><MotionReveal variant="image" className="teaser-image"><Image src="/images/campaign/campaign-two-v2.webp" alt="Two models in monochrome utility clothing on a concrete rooftop" fill sizes="(max-width: 800px) 100vw, 45vw" /></MotionReveal></div></section>
-    <section className="campaign-strip"><Image src="/images/campaign/lookbook-detail-v2.webp" alt="Close detail of a structured chalk jacket and charcoal trouser" fill sizes="100vw" /><div><p className="eyebrow">04 / THE CAMPAIGN</p><MotionReveal as="h2">BODY.<br />SPACE.<br /><em>SHAPE.</em></MotionReveal><Link href="/campaign">ENTER OFF / AXIS <UiIcon icon={ArrowRight} size={18} /></Link></div></section>
-    <section className="manifesto section-pad"><p className="eyebrow">05 / WHAT WE BELIEVE</p><MotionReveal as="blockquote">“CLOTHES SHOULD MAKE <em>SPACE</em> FOR THE BODY.”</MotionReveal><div><p>{collection.manifesto}</p><Link className="text-arrow" href="/about">THE IDEA BEHIND FORM / 27 <UiIcon icon={ArrowRight} size={18} /></Link></div></section>
+  return <main id="main-content" className="home">
+    <HeroPlan />
+    <AxisTrack products={products} />
+    <ElevationFeature />
+    <SectionCut />
+    <FrameStack />
+    <section className="manifesto section-pad" aria-labelledby="manifesto-title">
+      <h2 id="manifesto-title" className="sr-only">What FORM / 27 believes</h2>
+      <MotionReveal as="blockquote">“Clothes should make <em>space</em> for the body.”</MotionReveal>
+      <div><p>{collection.manifesto}</p><Link className="text-arrow" href="/about">THE IDEA BEHIND FORM / 27 <UiIcon icon={ArrowRight} size={18} /></Link></div>
+    </section>
   </main>;
 }
-
