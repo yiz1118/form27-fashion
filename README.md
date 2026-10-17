@@ -36,17 +36,37 @@ The browser suite uses installed Chrome and a local production server on port 31
 
 ## Product behavior
 
-The shop uses URL parameters for category, size, color, price, and sorting. Options within one group combine, while separate groups narrow results together. Product variants use stable IDs. The bag persists in `localStorage`, rejects invalid or unavailable restored variants, and merges repeated additions of the same size. The size guide shows illustrative garment measurements in centimeters or inches.
+The shop uses URL parameters for category, size, color, price, and sorting, and renders per request so a shared filter link arrives already filtered. Filter controls respond immediately and the URL follows. Options within one group combine, while separate groups narrow results together. Product variants use stable IDs. The bag persists in `localStorage`, rejects invalid or unavailable restored variants, and merges repeated additions of the same size. The size guide shows illustrative garment measurements in centimeters or inches.
 
 The campaign, lookbook, product content, and category-specific size charts live in `data/`. The product gallery uses five separate images per item, extracted from AI-generated source studies in `assets/source-sheets/`. Mobile galleries support native horizontal scrolling, thumbnails, and arrow keys. The purchase bar reflects the selected size. Campaign images were regenerated using the garment references; originals, exact prompts, and reference filenames are preserved in `assets/campaign-references/` and `assets/campaign-prompts.json`. Image and font provenance is recorded in [ASSET-MANIFEST.md](./ASSET-MANIFEST.md).
 
 The newsletter only demonstrates validation and does not save addresses. The checkout button opens a demo summary. The site is marked `noindex` because it is a portfolio concept and has no live store operations.
 
-## Editorial motion
+## Design direction: The Axis Plan
 
-`components/MotionReveal.tsx` provides three one-time IntersectionObserver reveals: clipped type, a horizontal image crop, and a small photographic scale with a shallow crop. Home, lookbook, campaign and About use selected reveals while shopping controls, body copy, hero photographs and creator contact details remain immediately available. The component keeps the original HTML element, leaves server-rendered content visible, and cleans up observers, preference listeners and Web Animations effects. Reduced motion skips reveals; changing that preference during playback cancels the effects. Mobile uses shorter durations and less travel.
+The site is drawn as an architect's plan of the collection. Columns are lettered axes (A–H), rows are numbered, and each of the eight pieces is pinned to its own axis. Pieces rest slightly off-axis and register square when hovered, focused or opened. Citron (#d7f247) is reserved for the active state and the one off-axis line. Mona Sans (variable width) carries display type; Martian Mono carries dimensions, sheet notes and labels. Labels follow what they name, like captions under a detail, never as eyebrows above headings. The direction and its rules are recorded in [PRODUCT.md](./PRODUCT.md), [DESIGN.md](./DESIGN.md) and `.impeccable/surfaces/app-page-tsx.md`.
 
-`app/globals.css` defines the 180ms interaction timing, directional SVG-arrow feedback, keyboard product-image feedback, tap states and 220ms native-dialog entrances. Navigation and dismissal never wait for playback. There are no continuous animation loops or scroll handlers.
+## Motion and interaction
+
+Motion uses Motion for React (`motion/react`) through `LazyMotion` with the `domMax` feature set, plus CSS and the Web Animations API.
+
+| Surface | Interaction |
+|---|---|
+| Home hero | Plan lines draw, axis bubbles land, the photograph drops onto the sheet. The pointer steers the citron axis line and a live angle readout; scrolling tilts it further. |
+| Eight pieces on axis | On wide screens the section pins and the rail travels A→H with scroll; a progress scale follows. Keyboard focus scrolls the page to the focused piece. Narrow screens use a native snap carousel. |
+| Section headlines | Scroll speed drives the Mona Sans width axis (narrower going up, wider going down). The stretch measures its container and stops short of the edge. |
+| The Axis Trouser elevation | Datum lines, dimension strings and the citron knee seam draw on; choosing a size re-measures waist, hip and inseam with counting numbers. |
+| Section cut and frame stack | The colonnade photograph parallaxes and turns in its window. The top lookbook frame can be dragged away or stepped with a button; the new frame is announced. |
+| Shop | Filter changes animate the plan with shared layout; PLAN / SCHEDULE switches between plates and a door-schedule table. |
+| Product sheet | Drag or swipe the gallery to turn the garment, a square loupe magnifies under a fine pointer, and adding to the bag flies the current view into the bag count. |
+
+`components/MotionReveal.tsx` still provides the one-time editorial reveals (clipped type, horizontal crop, photographic scale). Content is server-rendered and visible without JavaScript, and reveals release every animation effect when they finish. Hover colour changes are immediate; only presses and arrows travel.
+
+### Reduced motion and the MOTION toggle
+
+The operating-system setting is respected by default. `lib/motion-pref.ts` resolves a choice of `system`, `full` or `reduced` and stores an explicit choice in `localStorage` (`form27-motion`). An inline boot script sets `data-motion-mode` and `data-motion-choice` on `<html>` before first paint. The MOTION button in the top strip lets a visitor whose system reduces motion opt in, or anyone opt out. With reduced motion there is no travel, rotation, stretching or parallax; colour and state feedback stay. Without JavaScript, a `prefers-reduced-motion` media fallback applies the same rules.
+
+On Windows, a site that shows no movement usually means **Settings → Accessibility → Visual effects → Animation effects** is off; browsers report that as reduced motion.
 
 After building, run the motion checks on Chrome, WebKit and mobile emulations:
 
@@ -61,8 +81,10 @@ This suite starts its production server on port 3108. Screenshots and traces are
 ```text
 app/                 Eight page types, global design and metadata
 components/          Navigation, catalog controls, gallery, purchase and bag UI
+components/home/     Hero plan, axis track, elevation, section cut, frame stack
+components/plan/     The lettered plan grid used across the site
 data/                Typed fictional product and editorial content
-lib/                 Filter serialization and cart logic
+lib/                 Filter serialization, cart logic and motion preference
 assets/source-sheets/ Original generated five-view garment studies
 assets/campaign-references/ Original reference-based campaign images
 public/images/       Optimized garment views and campaign imagery

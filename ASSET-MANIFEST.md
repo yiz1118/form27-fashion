@@ -34,6 +34,6 @@ The four unreferenced first-pass PNG campaign images remain in `public/images/ca
 
 ## Typography
 
-`@fontsource/archivo`, `@fontsource/archivo-black`, and `@fontsource/barlow-condensed` are bundled locally. All three installed npm packages declare the **SIL Open Font License 1.1 (OFL-1.1)** and include a `LICENSE` file. Font files are served through the Next.js build; no remote font request is needed.
+`@fontsource-variable/mona-sans` (5.3.0) and `@fontsource-variable/martian-mono` (5.3.0) are bundled locally, using their width-axis builds (`wdth.css`). Both installed npm packages declare the **SIL Open Font License 1.1 (OFL-1.1)** and include a `LICENSE` file. Font files are served through the Next.js build; no remote font request is needed.
 
-Archivo provides reading and navigation, Archivo Black provides display headlines, and Barlow Condensed provides editorial indices. Interface icons come from the installed MIT-licensed `lucide-react` package. The wordmark is styled text made for this concept.
+Mona Sans provides display and reading type, including the scroll-driven width stretch; Martian Mono provides dimensions, labels and sheet notes. The earlier Archivo, Archivo Black and Barlow Condensed packages were removed in the Axis Plan redesign. Interface icons come from the installed MIT-licensed `lucide-react` package. The wordmark is styled text made for this concept.

@@ -1,5 +1,43 @@
 # FORM / 27 — verification report
 
+## Axis Plan redesign verification — 2026-10-17
+
+Branch `redesign/axis-plan`. The previous design remains on `master`. Tested against the local production build on Windows 11 with installed Chrome.
+
+| Check | Result |
+|---|---|
+| `npm run lint` | PASS, no errors or warnings |
+| `npm run typecheck` | PASS |
+| `npm test` | PASS, 4 tests |
+| `npm run build` | PASS; every route static except `/shop`, which now renders per request (see below) |
+| `npm run test:browser` | PASS, 17 tests |
+| Motion suite, Desktop Chrome + Pixel 7 Chrome | PASS, 10 tests |
+| Motion suite, Desktop WebKit + iPhone 13 WebKit | NOT RUN: Playwright 1.63 could not download WebKit v2359 on this machine (download failure inside and outside the sandbox) |
+| `impeccable detect` on all changed files | 0 findings after fixes (graph-paper backgrounds replaced with datum lines; side-stripe error state replaced with a full border) |
+
+**Fixes made during QA.** The home pieces track now takes its pinned height from CSS at first paint instead of after a script measurement, so its geometry no longer changes after load. Scroll-stretch headings measure their container and stop short of the edge (they previously pushed a 375px page 10px sideways). The elevation drawing now animates outside the photograph's reveal, so reveals release all effects. Shop filter checkboxes respond immediately through `useOptimistic` instead of waiting for navigation. Button hover colours flip immediately, and arrows also nudge on keyboard focus.
+
+**Interaction checks (motion on, Chrome).** Pointer steering moved the hero axis readout from −04.0° to +00.9° and −08.9°. The pinned track travelled 0 → −1342px across its scroll span, with the progress scale following. The headline width reached 125% during fast scrolling and settled back. The elevation re-measured XL as 96 / 128 / 81 cm. Dragging the top frame 300px advanced the stack to frame 2 of 4. Gallery drag turned the view to Back, and the loupe tracked the pointer. Add-to-bag created and removed the flight image and updated the bag to (1). The shop's shared-layout reflow ran on a filter change. The MOTION toggle switched `full → system (reduced) → full` with correct `aria-pressed` and labels.
+
+**Lab Core Web Vitals** (Playwright + Chrome, cache disabled; mobile = 390×844, 4× CPU slowdown, 1.6 Mbps / 150 ms):
+
+| Route | Desktop LCP | Desktop CLS | Mobile LCP | Mobile CLS |
+|---|---|---|---|---|
+| `/` | 0.48 s | 0.002 | 0.80 s | 0.001 |
+| `/shop` | 0.24 s | 0.023 | 0.83 s | 0.015 |
+| `/products/axis-trouser` | 0.14 s | 0.002 | 0.79 s | 0.004 |
+| `/lookbook` | 0.12 s | 0.002 | 0.85 s | 0.003 |
+| `/campaign` | 0.10 s | 0.010 | 0.86 s | 0.002 |
+| `/about` | 0.09 s | 0.007 | 0.95 s | 0.025 |
+| `/size-guide` | 0.09 s | 0.002 | 0.80 s | 0.003 |
+| `/cart` (empty) | 0.52 s | 0 | 2.58 s | 0.088 |
+
+CLS includes a full scroll through each page, so scroll-linked motion is counted. Two fixes came out of this pass. `/shop` measured 3.2 s LCP and 0.64 CLS on mobile before: its filters made Next discard the server HTML and rebuild the grid after JavaScript loaded. It now renders per request with the URL's filters, and filtered links (for example `?category=Pants`) arrive complete. Page titles keep their hand-set line breaks while the web font loads. `/cart` had 0.48 CLS: it now holds the sheet open until the bag is read from storage. Its mobile LCP stays near 2.5 s because the bag contents can only be known after hydration. These are lab numbers on a local server, not field data or a Lighthouse score.
+
+**Visual review.** Every route was captured and reviewed at 1440, 768 and 390px. No horizontal overflow at 375–1440px in the automated checks. Axe reports zero violations on the covered pages.
+
+**Not verified.** WebKit engines (see above); physical iPhone and Android devices; Safari; deployment. The `next` 16.3.6 dependency carries an upstream high-severity advisory (`npm audit`), fixed in 16.4.2. It concerns `use cache` and Draft Mode, which this site does not use, and was left unchanged in this redesign.
+
 ## Motion polish verification — 2026-09-30
 
 The finished motion changes were tested against the local production build. The existing typography, color tokens, page structure, editorial copy, shopping destinations and creator configuration are retained. The new favicon uses the existing palette and resolves Chrome's previously missing `/favicon.ico` request through Next's generated SVG icon metadata.

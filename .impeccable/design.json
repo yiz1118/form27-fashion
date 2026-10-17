@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "name": "FORM / 27 — The Axis Plan",
+  "source": "app/globals.css",
+  "seed": "169df205",
+  "thesis": "The store is an architect's plan of the concrete building where OFF / AXIS was shot; every garment rests off its axis and registers square on interaction.",
+  "color": {
+    "paper": "#ecebe6",
+    "sheet": "#f4f3ef",
+    "concrete": "#d3d2cc",
+    "concreteDeep": "#c2c1ba",
+    "ink": "#121212",
+    "ink2": "#34342f",
+    "muted": "#5b5b56",
+    "hair": "rgb(18 18 18 / .13)",
+    "hair2": "rgb(18 18 18 / .32)",
+    "citron": "#d7f247",
+    "citronInk": "#5f6d00",
+    "poche": "#121212",
+    "onPoche": "#ecebe6",
+    "onPocheMuted": "#a6a69f"
+  },
+  "accentRule": "Citron marks only the active state, one highlighted word per display heading, and the off-axis line.",
+  "type": {
+    "display": { "family": "Mona Sans Variable", "weight": 820, "stretch": "112%", "tracking": "-0.035em", "lineHeight": 0.88, "case": "upper" },
+    "stretchRange": { "narrow": "84%", "rest": "108%", "wide": "125%", "driver": "scroll velocity, capped to container" },
+    "body": { "family": "Mona Sans Variable", "stretch": "100%", "size": "16-26px" },
+    "label": { "family": "Martian Mono Variable", "weight": 600, "size": "10-13px", "tracking": "0.04em", "case": "upper", "numerals": "tabular" },
+    "pageTitle": "clamp(40px, 14cqi, 150px)"
+  },
+  "space": { "gutter": "clamp(16px, 4vw, 56px)", "breakpoints": [1050, 800, 560], "minTarget": 44 },
+  "shape": { "radius": 0, "elevation": "plate shadow only", "pieceRestAngles": [-3, 2.2, -1.6, 3.2, -2.6, 1.4, -3.4, 2.6] },
+  "motion": {
+    "ease": "cubic-bezier(.16, 1, .3, 1)",
+    "snap": "linear(0, .24 8%, .62 18%, .9 28%, 1.04 38%, 1.07 46%, 1.04 58%, 1.01 72%, 1)",
+    "spring": { "stiffness": 260, "damping": 26 },
+    "library": "motion/react with LazyMotion domMax",
+    "reduced": "html[data-motion-mode=reduced]; OS default, MOTION toggle override stored as form27-motion",
+    "signatures": [
+      "pointer-steered hero axis with live angle readout",
+      "pinned A-to-H pieces track",
+      "scroll-velocity width stretch",
+      "elevation that re-measures by size",
+      "draggable frame stack",
+      "drag-to-turn gallery with loupe",
+      "fly-to-bag",
+      "shared-layout shop reflow"
+    ]
+  },
+  "labels": "Sheet tags in the top-right corner; sheet notes follow what they name; no eyebrows above headings.",
+  "surfaces": [".impeccable/surfaces/app-page-tsx.md"]
+}

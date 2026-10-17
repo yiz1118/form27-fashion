@@ -64,7 +64,7 @@ export function ProductGallery({ product }: { product: Product }) {
         onPointerDown={event => {
           if (event.pointerType !== "mouse") return;
           drag.current = { x: event.clientX, left: event.currentTarget.scrollLeft, moved: false };
-          event.currentTarget.setPointerCapture(event.pointerId);
+          try { event.currentTarget.setPointerCapture(event.pointerId); } catch { /* pointer already released */ }
         }}
         onPointerMove={event => {
           const state = drag.current;
@@ -79,7 +79,7 @@ export function ProductGallery({ product }: { product: Product }) {
           event.currentTarget.classList.remove("is-turning");
           if (state?.moved) selectView(Math.round(event.currentTarget.scrollLeft / event.currentTarget.clientWidth));
         }}>
-        {product.gallery.map(image => <div className="gallery-slide" key={image.view}><ProductArtwork product={product} view={image.view} /></div>)}
+        {product.gallery.map((image, imageIndex) => <div className="gallery-slide" key={image.view}><ProductArtwork product={product} view={image.view} priority={imageIndex === 0} /></div>)}
       </div>
       <div ref={lens} className="gallery-loupe" hidden aria-hidden="true" />
     </div>

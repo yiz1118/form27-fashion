@@ -24,7 +24,7 @@ export function isReduced(choice: MotionChoice = readChoice()) {
 /** Mirror the effective state on <html> so CSS can gate every animation from one attribute. */
 export function applyChoice(choice: MotionChoice) {
   const root = document.documentElement;
-  root.dataset.motion = isReduced(choice) ? "reduced" : "full";
+  root.dataset.motionMode = isReduced(choice) ? "reduced" : "full";
   root.dataset.motionChoice = choice;
 }
 
@@ -47,4 +47,4 @@ export function subscribe(callback: () => void) {
 }
 
 /** Runs before first paint (inlined in <head>) so no animation flashes against the visitor's choice. */
-export const motionBootScript = `(function(){try{var c=localStorage.getItem("${MOTION_KEY}");}catch(e){c=null}var r=c==="reduced"||(c!=="full"&&matchMedia("(prefers-reduced-motion: reduce)").matches);var d=document.documentElement;d.dataset.motion=r?"reduced":"full";d.dataset.motionChoice=c==="full"||c==="reduced"?c:"system";})();`;
+export const motionBootScript = `(function(){try{var c=localStorage.getItem("${MOTION_KEY}");}catch(e){c=null}var r=c==="reduced"||(c!=="full"&&matchMedia("(prefers-reduced-motion: reduce)").matches);var d=document.documentElement;d.dataset.motionMode=r?"reduced":"full";d.dataset.motionChoice=c==="full"||c==="reduced"?c:"system";})();`;

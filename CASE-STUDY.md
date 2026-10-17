@@ -11,11 +11,11 @@ Demonstrate a shopping experience in which products can be discovered, understoo
 
 ## Visual Identity
 
-FORM / 27 explores sculptural utility through hard architectural lines and loose silhouettes. The first collection uses near-black, chalk, stone, and graphite with a single citron accent. Archivo Black carries oversized headlines; Archivo supports navigation and product reading; Barlow Condensed marks editorial indices. Editorial photography uses concrete, strong shadows, and deliberately asymmetric cropping. The label, merchandise, campaign, and photography were created for this concept.
+FORM / 27 explores sculptural utility through hard architectural lines and loose silhouettes. The redesign, **The Axis Plan**, draws the store as an architect's plan: lettered column axes, numbered rows, title blocks, section cuts, elevations with dimension strings, and a door schedule for the catalogue. Each of the eight pieces is pinned to its own axis and rests a few degrees off it until the visitor engages, when it registers square. Paper, concrete and poché black carry the sheet; citron is reserved for the active state and the one off-axis line. Mona Sans (variable width) carries display type and stretches with scroll speed; Martian Mono carries dimensions and sheet notes. Editorial photography uses concrete, strong shadows, and deliberately asymmetric cropping. The label, merchandise, campaign, and photography were created for this concept.
 
 ## UX Strategy
 
-The campaign occupies the first impression, while Shop remains one clear action away. Collection filters are direct and shareable through the URL. Product cards use model imagery to make silhouette legible before the detail page. Mobile navigation and filters use native modal dialogs, and reduced-motion preferences are respected.
+The campaign occupies the first impression, while Shop remains one clear action away. Collection filters are direct and shareable through the URL. Product cards use model imagery to make silhouette legible before the detail page. Motion explains the product rather than decorating it: the hero axis follows the pointer, the pieces rail travels A→H, the elevation re-measures for a chosen size, the gallery turns under a drag, and a purchase flies into the bag. Mobile navigation and filters use native modal dialogs. Reduced-motion preferences are respected by default, and a visible MOTION toggle lets visitors choose.
 
 ## Product Architecture
 
@@ -31,7 +31,7 @@ The same catalog and cart flow work at narrow widths. Navigation and filters ope
 
 ## Technology
 
-Next.js App Router, React, TypeScript, Tailwind CSS, project-local fonts, Next Image, Playwright, and a small set of pure catalog/cart utilities. Data is local and simulated. The checkout summary collects no payment information or order details. Newsletter interaction stores no addresses.
+Next.js App Router, React, TypeScript, Tailwind CSS, Motion for React, project-local variable fonts, Next Image, Playwright, and a small set of pure catalog/cart utilities. Data is local and simulated. The checkout summary collects no payment information or order details. Newsletter interaction stores no addresses.
 
 ## What This Project Demonstrates
 

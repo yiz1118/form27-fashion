@@ -38,9 +38,15 @@ export function ElevationFeature() {
   return <section className="feature-story elevation" aria-labelledby="axis-title">
     <div ref={sheet} className={`elevation-field ${seen ? "is-drawn" : ""}`}>
       <span className="elevation-sheet-label">F27–01 · Front elevation · 1:10</span>
-      <MotionReveal variant="crop" className="feature-image elevation-figure">
-        <Image src="/images/products/axis-trouser-front.webp" alt="Axis Trouser front view with the angled knee seams" fill sizes="(max-width: 800px) 46vw, 22vw" />
+      <span className="datum-label" aria-hidden="true">±0.00 Ground · +1.02 Waistband</span>
+      {/* The photograph reveals on its own; the drawing over it animates separately, so the reveal can release its effects. */}
+      <div className="elevation-figure">
+        <MotionReveal variant="crop" className="feature-image elevation-photo">
+          <Image src="/images/products/axis-trouser-front.webp" alt="Axis Trouser front view with the angled knee seams" fill sizes="(max-width: 800px) 46vw, 22vw" />
+        </MotionReveal>
         <svg className="elevation-lines" viewBox="0 0 380 1024" preserveAspectRatio="none" aria-hidden="true">
+          <path pathLength={1} className="datum" d="M-900 958H1300" />
+          <path pathLength={1} className="datum" d="M-900 34H1300" />
           <path pathLength={1} className="dim" d="M92 34H290M92 22V46M290 22V46" />
           <path pathLength={1} className="dim" d="M58 214H324M58 202V226M324 202V226" />
           <path pathLength={1} className="dim" d="M368 300V946M356 300H380M356 946H380" />
@@ -50,7 +56,7 @@ export function ElevationFeature() {
         <span className="callout callout-hip" aria-hidden="true">Hip <b><Measure value={hip} reduced={reduced} /></b> cm</span>
         <span className="callout callout-inseam" aria-hidden="true">Inseam <b><Measure value={inseam} reduced={reduced} /></b> cm</span>
         <span className="callout callout-seam" aria-hidden="true">Angled knee seam · off axis</span>
-      </MotionReveal>
+      </div>
     </div>
     <div className="feature-copy">
       <h2 id="axis-title">The Axis<br /><em>Trouser.</em></h2>

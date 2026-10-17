@@ -56,7 +56,8 @@ em { font-style: normal }
 .stretch-line { display: block; white-space: nowrap }
 
 /* Controls --------------------------------------------------------------------------------------------- */
-.black-button, .outline-button, .hero-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 54px; padding: 16px 20px; font: 600 12px/1.2 var(--mono); letter-spacing: .02em; text-transform: uppercase; transition: background .2s, color .2s, translate .35s var(--snap), box-shadow .2s }
+/* Hover colour flips immediately; only the press and the arrow travel. */
+.black-button, .outline-button, .hero-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 54px; padding: 16px 20px; font: 600 12px/1.2 var(--mono); letter-spacing: .02em; text-transform: uppercase; transition: translate .35s var(--snap), box-shadow .2s }
 .black-button { border: 1px solid var(--ink); background: var(--ink); color: var(--paper) }
 .black-button:hover { background: var(--citron); color: var(--ink) }
 .outline-button { border: 1px solid var(--ink); background: transparent; color: var(--ink) }
@@ -65,8 +66,8 @@ em { font-style: normal }
 .hero-cta:hover { background: var(--ink); color: var(--citron) }
 .black-button:active, .outline-button:active, .hero-cta:active { translate: 0 2px }
 .black-button > span, .outline-button > span { display: inline-flex; align-items: center; gap: 14px; white-space: nowrap }
-.black-button svg, .outline-button svg, .hero-cta svg, .text-arrow svg { transition: translate .35s var(--snap) }
-.black-button:hover svg, .outline-button:hover svg, .hero-cta:hover svg, .text-arrow:hover svg { translate: 4px 0 }
+.black-button svg, .outline-button svg, .hero-cta svg, .text-arrow svg { transition: transform .35s var(--snap) }
+.black-button:is(:hover, :focus-visible) svg, .outline-button:is(:hover, :focus-visible) svg, .hero-cta:is(:hover, :focus-visible) svg, .text-arrow:is(:hover, :focus-visible) svg { transform: translateX(4px) }
 .text-arrow { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font: 600 12px var(--mono); text-transform: uppercase; background: linear-gradient(var(--ink), var(--ink)) 0 100% / 100% 1px no-repeat; transition: background-size .35s var(--ease), color .2s }
 .text-arrow:hover { background-image: linear-gradient(var(--citron), var(--citron)); background-size: 100% 6px }
 
@@ -140,11 +141,11 @@ em { font-style: normal }
 .title-block-hint dd { color: var(--citron-ink) }
 
 /* Load sequence: one beat. The grid draws, axes ring in, the plate lands, the axis scores across. */
-html[data-motion="full"] .home-hero .plan-lines { animation: plan-draw 1.3s var(--ease) both }
-html[data-motion="full"] .home-hero .axis-x span, html[data-motion="full"] .home-hero .axis-y span { animation: bubble-in .5s var(--snap) both; animation-delay: calc(240ms + var(--i) * 55ms) }
-html[data-motion="full"] .hero-plate { animation: plate-land 1.05s var(--snap) both; animation-delay: .18s }
-html[data-motion="full"] .hero-axis-line { animation: axis-score 1s var(--ease) both; animation-delay: .55s }
-html[data-motion="full"] .axis-readout, html[data-motion="full"] .title-block { animation: rise .7s var(--ease) both; animation-delay: .7s }
+html[data-motion-mode="full"] .home-hero .plan-lines { animation: plan-draw 1.3s var(--ease) both }
+html[data-motion-mode="full"] .home-hero .axis-x span, html[data-motion-mode="full"] .home-hero .axis-y span { animation: bubble-in .5s var(--snap) both; animation-delay: calc(240ms + var(--i) * 55ms) }
+html[data-motion-mode="full"] .hero-plate { animation: plate-land 1.05s var(--snap) both; animation-delay: .18s }
+html[data-motion-mode="full"] .hero-axis-line { animation: axis-score 1s var(--ease) both; animation-delay: .55s }
+html[data-motion-mode="full"] .axis-readout, html[data-motion-mode="full"] .title-block { animation: rise .7s var(--ease) both; animation-delay: .7s }
 @keyframes plan-draw { from { clip-path: inset(0 100% 100% 0) } to { clip-path: inset(0 0 0 0) } }
 @keyframes bubble-in { from { scale: .2; opacity: 0 } to { scale: 1; opacity: 1 } }
 @keyframes plate-land { from { translate: 0 -60px; scale: 1.06 } to { translate: 0 0; scale: 1 } }
@@ -152,17 +153,21 @@ html[data-motion="full"] .axis-readout, html[data-motion="full"] .title-block { 
 @keyframes rise { from { translate: 0 14px; opacity: 0 } to { translate: 0 0; opacity: 1 } }
 
 /* Home: eight pieces on axis -------------------------------------------------------------------------- */
-.axis-track { position: relative; border-bottom: 1px solid var(--ink) }
+.axis-track { --stop: clamp(230px, 21vw, 330px); --stop-gap: clamp(28px, 4vw, 64px); position: relative; border-bottom: 1px solid var(--ink) }
 .track-viewport { padding: clamp(56px, 7vw, 96px) 0 40px; display: grid; gap: clamp(28px, 4vw, 56px) }
-.axis-track.is-pinned .track-viewport { position: sticky; top: 0; height: 100vh; overflow: hidden; align-content: center; padding-block: 72px 32px }
 .track-head { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 24px 6vw; padding: 0 var(--g) }
 .track-head h2 { font-size: clamp(54px, 8.4vw, 148px) }
 .track-head p { max-width: 380px; color: var(--ink-2); margin-bottom: 18px }
-.track-rail { display: flex; gap: clamp(28px, 4vw, 64px); margin: 0; padding: 26px var(--g) 30px; list-style: none; width: max-content; min-width: 100% }
-.track-stop { flex: none; width: clamp(230px, 21vw, 330px) }
+.track-rail { display: flex; gap: var(--stop-gap); margin: 0; padding: 26px var(--g) 30px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--ink) transparent }
+.track-stop { flex: none; width: var(--stop); scroll-snap-align: center }
 .track-stop:nth-child(even) { margin-top: clamp(40px, 7vh, 90px) }
-.axis-track:not(.is-pinned) .track-rail { width: auto; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--ink) transparent }
-.axis-track:not(.is-pinned) .track-stop { scroll-snap-align: center }
+/* Pinned travel is computed in CSS, so the section has its final height at first paint; script only slides the rail.
+   It needs the boot script (data-motion-choice) because without JavaScript nothing would move the rail. */
+@media (min-width: 900px) {
+  html[data-motion-mode="full"][data-motion-choice] .axis-track { height: calc(100vh + var(--stops, 8) * var(--stop) + (var(--stops, 8) - 1) * var(--stop-gap) + 2 * var(--g) - 100vw) }
+  html[data-motion-mode="full"][data-motion-choice] .track-viewport { position: sticky; top: 0; height: 100vh; overflow: hidden; align-content: center; padding-block: 72px 32px }
+  html[data-motion-mode="full"][data-motion-choice] .track-rail { width: max-content; min-width: 100%; overflow: visible; scroll-snap-type: none }
+}
 .track-scale { position: relative; margin: 0 var(--g); height: 26px; display: flex; justify-content: space-between; align-items: center; font: 600 10px var(--mono); border-top: 1px solid var(--ink) }
 .track-scale span { position: absolute; left: 0; right: 0; top: -2px; height: 3px; background: var(--citron); transform-origin: left; box-shadow: 0 0 0 1px rgb(18 18 18 / .2) }
 
@@ -189,16 +194,20 @@ html[data-motion="full"] .axis-readout, html[data-motion="full"] .title-block { 
 
 /* Home: the elevation ---------------------------------------------------------------------------------- */
 .elevation { display: grid; grid-template-columns: 1.15fr 1fr; border-bottom: 1px solid var(--ink) }
-.elevation-field { position: relative; display: grid; place-items: center; min-height: min(92vh, 900px); padding: 70px 120px 60px; background: var(--concrete); background-image: linear-gradient(to right, var(--hair) 1px, transparent 1px), linear-gradient(to bottom, var(--hair) 1px, transparent 1px); background-size: 72px 72px; border-right: 1px solid var(--ink) }
+.elevation-field { position: relative; display: grid; place-items: center; min-height: min(92vh, 900px); padding: 70px 120px 60px; overflow: clip; background: var(--concrete); border-right: 1px solid var(--ink) }
 .elevation-sheet-label { position: absolute; top: 18px; left: 20px; color: var(--ink-2) }
 .elevation-figure { position: relative; height: min(70vh, 660px); aspect-ratio: 380 / 1024; overflow: visible }
-.elevation-figure > img { object-fit: contain; mix-blend-mode: multiply }
+.elevation-photo { position: absolute; inset: 0 }
+.elevation-photo > img { object-fit: contain; mix-blend-mode: multiply }
 .elevation-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none }
 .elevation-lines path { fill: none; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.1s var(--ease) }
 .elevation-lines .dim { stroke: var(--ink); stroke-width: 1.2 }
 .elevation-lines .seam { stroke: var(--citron); stroke-width: 4; transition-delay: .5s }
-.elevation-lines path:nth-child(2) { transition-delay: .15s }
-.elevation-lines path:nth-child(3) { transition-delay: .3s }
+/* Level datums run the width of the sheet, the way an elevation is read: ground under the hem, a line at the waistband. */
+.elevation-lines .datum { stroke: var(--hair-2); stroke-width: 1; transition-duration: 1.4s }
+.datum-label { position: absolute; left: 20px; bottom: 18px; font: 600 10px var(--mono); text-transform: uppercase; color: var(--ink-2) }
+.elevation-lines path:nth-child(4) { transition-delay: .15s }
+.elevation-lines path:nth-child(5) { transition-delay: .3s }
 .is-drawn .elevation-lines path { stroke-dashoffset: 0 }
 .callout { position: absolute; z-index: 2; white-space: nowrap; padding: 3px 6px; background: var(--paper); border: 1px solid var(--ink); font: 600 10px var(--mono); text-transform: uppercase; opacity: 0; translate: 0 6px; transition: opacity .5s var(--ease) .8s, translate .5s var(--ease) .8s }
 .callout b { font-size: 13px; font-variant-numeric: tabular-nums }
@@ -262,10 +271,10 @@ html[data-motion="full"] .axis-readout, html[data-motion="full"] .title-block { 
 
 /* Page intros (every inner sheet starts on the grid) ----------------------------------------------------- */
 .page-intro { position: relative; padding: clamp(56px, 7vw, 110px) var(--g) clamp(40px, 5vw, 72px); border-bottom: 1px solid var(--ink); background-image: linear-gradient(to right, var(--hair) 1px, transparent 1px); background-size: calc(100% / 8) 100%; background-position: var(--g) 0; overflow: hidden }
-html[data-motion="full"] .page-intro { animation: intro-grid 1.1s var(--ease) both }
+html[data-motion-mode="full"] .page-intro { animation: intro-grid 1.1s var(--ease) both }
 @keyframes intro-grid { from { background-size: calc(100% / 8) 0% } to { background-size: calc(100% / 8) 100% } }
 .page-intro { container-type: inline-size }
-.page-intro h1 { font-size: clamp(40px, 14cqi, 150px); margin: 14px 0 26px }
+.page-intro h1 { font-size: clamp(40px, 14cqi, 150px); margin: 14px 0 26px; white-space: nowrap } /* lines are set by hand; nowrap keeps the height fixed while the web font loads */
 .page-intro h1 em { background: var(--citron); padding: 0 .06em }
 .page-intro > p, .intro-lead { max-width: 520px; font-size: 18px; color: var(--ink-2) }
 .shop-intro { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 20px }
@@ -340,7 +349,11 @@ html[data-motion="full"] .page-intro { animation: intro-grid 1.1s var(--ease) bo
 .product-detail-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); border-bottom: 1px solid var(--ink) }
 .gallery-panel { position: sticky; top: 0; align-self: start; padding: 26px var(--g) 30px; border-right: 1px solid var(--ink) }
 .gallery-sheet { display: flex; justify-content: space-between; padding: 8px 12px; border: 1px solid var(--ink); border-bottom: 0; font: 600 10px var(--mono); text-transform: uppercase; background: var(--paper) }
-.gallery-main { position: relative; border: 1px solid var(--ink); background: var(--concrete); background-image: linear-gradient(to right, var(--hair) 1px, transparent 1px), linear-gradient(to bottom, var(--hair) 1px, transparent 1px); background-size: 48px 48px; overflow: hidden }
+/* The sheet carries a centre-front line and a ground line, the two references a garment drawing is read against. */
+.gallery-main { position: relative; isolation: isolate; border: 1px solid var(--ink); background: var(--concrete); overflow: hidden }
+.gallery-main::before, .gallery-main::after { content: ""; position: absolute; z-index: -1; pointer-events: none; background: var(--hair-2) }
+.gallery-main::before { top: 0; bottom: 0; left: 50%; width: 1px }
+.gallery-main::after { left: 0; right: 0; bottom: 5%; height: 1px }
 .gallery-rail { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; cursor: grab; aspect-ratio: 4 / 5; max-height: 78vh; width: 100% }
 .gallery-rail::-webkit-scrollbar { display: none }
 .gallery-rail.is-turning { scroll-snap-type: none; cursor: grabbing; user-select: none }
@@ -417,6 +430,8 @@ html[data-motion="full"] .page-intro { animation: intro-grid 1.1s var(--ease) bo
 .cart-summary > div { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-block: 1px solid var(--ink); font: 600 11px var(--mono) }
 .cart-summary strong { font: 700 26px var(--mono) }
 .cart-summary > p, .cart-summary small { font: 500 11px var(--mono); color: var(--muted) }
+/* Holds the sheet open until the bag is read from storage, so the footer is never on screen to be pushed. */
+.cart-loading { min-height: 100svh; padding: 72px var(--g); font: 600 11px var(--mono); text-transform: uppercase; color: var(--muted) }
 .empty-cart { display: grid; justify-items: start; gap: 22px; padding: 72px var(--g) 120px }
 .empty-cart > p { font: 600 11px var(--mono) }
 .empty-cart h2 { font-size: clamp(48px, 6vw, 104px) }
@@ -444,7 +459,7 @@ html[data-motion="full"] .page-intro { animation: intro-grid 1.1s var(--ease) bo
 .lookbook-opening, .campaign-statement { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: end; border-bottom: 1px solid var(--ink) }
 .lookbook-opening h2 { font-size: clamp(56px, 7vw, 120px) }
 .lookbook-opening > p, .campaign-statement > div > p:first-child { font-size: clamp(19px, 1.8vw, 26px); line-height: 1.3; color: var(--ink-2) }
-.campaign-statement h2 { font-size: clamp(32px, 5vw, 88px) }
+.campaign-statement h2 { font-size: clamp(32px, 5vw, 88px); text-wrap: balance }
 .campaign-statement h2 span { color: var(--muted) }
 .campaign-statement > div { display: grid; gap: 22px; max-width: 620px }
 .lookbook-spread, .campaign-frames, .campaign-end { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; padding: clamp(56px, 7vw, 110px) var(--g); border-bottom: 1px solid var(--ink) }
@@ -523,7 +538,8 @@ html[data-motion="full"] .page-intro { animation: intro-grid 1.1s var(--ease) bo
 .newsletter-row:focus-within { outline: 2px solid var(--ink); outline-offset: 3px }
 .newsletter-row button { min-width: 64px; border: 0; border-left: 1px solid var(--ink); background: var(--citron); transition: background .2s }
 .newsletter-row button:hover { background: var(--ink); color: var(--citron) }
-.newsletter input[aria-invalid="true"] { box-shadow: inset 0 -3px 0 #a3301c }
+.newsletter-row:has(input[aria-invalid="true"]) { border-color: #a3301c; box-shadow: 0 0 0 1px #a3301c }
+.newsletter input[aria-invalid="true"] { background: rgb(163 48 28 / .06) }
 .newsletter p { font: 500 11px var(--mono); color: var(--muted) }
 .footer-bottom { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; padding: 26px var(--g); border-bottom: 1px solid var(--ink) }
 .footer-bottom nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px }
@@ -655,10 +671,10 @@ html[data-motion="full"] .page-intro { animation: intro-grid 1.1s var(--ease) bo
 }
 
 /* Reduced motion: no travel, no spinning, no stretching. Colour and state feedback stay. -------------------- */
-html[data-motion="reduced"] { scroll-behavior: auto }
-html[data-motion="reduced"] *, html[data-motion="reduced"] *::before, html[data-motion="reduced"] *::after { animation: none !important; transition-property: color, background-color, border-color, opacity, outline-color, text-decoration-color !important; transition-duration: .15s !important; transition-delay: 0s !important }
-html[data-motion="reduced"] .elevation-lines path { stroke-dashoffset: 0 }
-html[data-motion="reduced"] .callout { opacity: 1; translate: 0 0 }
+html[data-motion-mode="reduced"] { scroll-behavior: auto }
+html[data-motion-mode="reduced"] *, html[data-motion-mode="reduced"] *::before, html[data-motion-mode="reduced"] *::after { animation: none !important; transition-property: color, background-color, border-color, opacity, outline-color, text-decoration-color !important; transition-duration: .15s !important; transition-delay: 0s !important }
+html[data-motion-mode="reduced"] .elevation-lines path { stroke-dashoffset: 0 }
+html[data-motion-mode="reduced"] .callout { opacity: 1; translate: 0 0 }
 @media (prefers-reduced-motion: reduce) {
   html:not([data-motion-choice]) { scroll-behavior: auto }
   html:not([data-motion-choice]) *, html:not([data-motion-choice]) *::before, html:not([data-motion-choice]) *::after { animation: none !important; transition-property: color, background-color, border-color, opacity !important }

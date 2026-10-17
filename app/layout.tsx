@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  // The boot script sets data-motion before first paint, so <html> attributes legitimately differ from the server render.
-  return <html lang="en" data-motion="full" suppressHydrationWarning>
+  // The boot script sets data-motion-mode before first paint, so <html> attributes legitimately differ from the server render.
+  return <html lang="en" data-motion-mode="full" suppressHydrationWarning>
     <head><script dangerouslySetInnerHTML={{ __html: motionBootScript }} /></head>
     <body><MotionProvider><CartProvider><SiteHeader />{children}<SiteFooter /></CartProvider></MotionProvider></body>
   </html>;

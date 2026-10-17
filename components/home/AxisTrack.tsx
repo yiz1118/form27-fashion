@@ -19,6 +19,7 @@ export function AxisTrack({ products }: { products: Product[] }) {
   const rail = useRef<HTMLOListElement>(null);
   const { reduced } = useMotionPref();
   const [travel, setTravel] = useState(0);
+  // Mirrors the CSS pin (wide screen, motion on); the section height itself comes from CSS.
   const pinned = travel > 0 && !reduced;
   const { scrollYProgress } = useScroll({ target: section, offset: ["start start", "end end"] });
   const x = useSpring(useTransform(scrollYProgress, [0.04, 0.96], [0, -travel], { clamp: true }), { stiffness: 220, damping: 40 });
@@ -45,7 +46,7 @@ export function AxisTrack({ products }: { products: Product[] }) {
     window.scrollTo({ top, behavior: "instant" });
   };
 
-  return <section ref={section} className={`axis-track ${pinned ? "is-pinned" : ""}`} aria-labelledby="track-title" style={pinned ? { height: `calc(100vh + ${travel}px)` } : undefined}>
+  return <section ref={section} className={`axis-track ${pinned ? "is-pinned" : ""}`} aria-labelledby="track-title" style={{ "--stops": products.length } as React.CSSProperties}>
     <div className="track-viewport">
       <div className="track-head">
         <StretchHeading id="track-title" lines={["Eight pieces", <>on axis<span className="accent-dot">.</span></>]} />
